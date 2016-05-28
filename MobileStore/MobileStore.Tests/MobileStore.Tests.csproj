@@ -102,9 +102,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MobileStore\MobileStore.csproj">
+    <ProjectReference Include="..\MobileStore\MobileStore.Web.csproj">
       <Project>{320E291E-E93D-48A7-921F-4524FC0690B5}</Project>
-      <Name>MobileStore</Name>
+      <Name>MobileStore.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

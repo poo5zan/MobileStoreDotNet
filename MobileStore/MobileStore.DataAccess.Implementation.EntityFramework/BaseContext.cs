@@ -24,7 +24,6 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework
         protected BaseContext()
             :base("name=MobileStoreConnection")
         {
-
         }
 
     }

@@ -12,7 +12,10 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework.Interface
         IQueryable<T> All { get; }
         IQueryable<T> AllIncluding(params Expression<Func<T, object>>[] includeProperties);
         T Find(int id);
-        void InsertOrUpdate(T entity);
-        void Delete(int id);
+        void Insert(T entity);
+        void Update(T entity);
+        void Remove(int id);
+        void Remove(T entity);
     }
+       
 }

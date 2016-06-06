@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MobileStore.DataAccess.Implementation.EF.Repository")]
+[assembly: AssemblyTitle("MobileStore.DataAccess.Implementation.EntityFramework.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MobileStore.DataAccess.Implementation.EF.Repository")]
+[assembly: AssemblyProduct("MobileStore.DataAccess.Implementation.EntityFramework.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3fb54f1d-46ed-4211-a942-79df26921c64")]
+[assembly: Guid("26ddf0ff-d1b1-4b03-b4e2-1a018213f197")]
 
 // Version information for an assembly consists of the following four values:
 //

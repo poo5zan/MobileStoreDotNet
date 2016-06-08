@@ -13,6 +13,8 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework
     {
         public DbSet<Mobile> Mobile { get; set; }
 
+        public DbSet<Currency> Currency { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

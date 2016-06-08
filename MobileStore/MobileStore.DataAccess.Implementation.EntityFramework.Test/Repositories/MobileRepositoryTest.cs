@@ -19,21 +19,48 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework.Test.Repositorie
             var unitOfWork = new UnitOfWork();
             IMobileRepository _mobileRepository = new MobileRepository(unitOfWork);
 
+            //insert currencies            
+
             _mobileRepository.Insert(new Mobile() {
-                Name = "Samsung J7",
+                Name = "Samsung J7 2016",
                 Brand = "Samsung",
-                CommonName = "Samsung J7",
-                Model = "J7",
+                CommonName = "Samsung J7 2016",
+                Model = "J7 2016",
                 UniqueName = "",
-                Id = 1
+                Price = 783,
+                CurrencyId = 1
             });
+
+            _mobileRepository.Insert(new Mobile()
+            {
+                Name = "Samsung J5 2016",
+                Brand = "Samsung",
+                CommonName = "Samsung J5 2016",
+                Model = "J5 2016",
+                UniqueName = "",
+                Price = 783,
+                CurrencyId = 1
+            });
+
 
             unitOfWork.Save();
 
-            var mob = _mobileRepository.Find(1);
+           // var mob = _mobileRepository.Find(1);
 
-            Assert.IsNotNull(mob);
-            Assert.AreEqual("Samsung", mob.Brand);
+           // Assert.IsNotNull(mob);
+           // Assert.AreEqual("Samsung", mob.Brand);
+
+        }
+
+        [TestMethod]
+        public void Find() {
+            var unitOfWork = new UnitOfWork();
+            IMobileRepository mobileRepository = new MobileRepository(unitOfWork);
+
+            var mobile = mobileRepository.Find(3);
+                     
+
+            Assert.IsNotNull(mobile);
 
         }
 

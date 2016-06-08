@@ -58,6 +58,26 @@
     <Compile Include="Migrations\201606050520077_initial.Designer.cs">
       <DependentUpon>201606050520077_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606081451530_price-property.cs" />
+    <Compile Include="Migrations\201606081451530_price-property.Designer.cs">
+      <DependentUpon>201606081451530_price-property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606081458257_addedCurrencyProperty.cs" />
+    <Compile Include="Migrations\201606081458257_addedCurrencyProperty.Designer.cs">
+      <DependentUpon>201606081458257_addedCurrencyProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606081533354_addedCurrencyEntity.cs" />
+    <Compile Include="Migrations\201606081533354_addedCurrencyEntity.Designer.cs">
+      <DependentUpon>201606081533354_addedCurrencyEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606081537107_updateDataTypeOfMobile.Currency.cs" />
+    <Compile Include="Migrations\201606081537107_updateDataTypeOfMobile.Currency.Designer.cs">
+      <DependentUpon>201606081537107_updateDataTypeOfMobile.Currency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606081540412_changedCurrencyPropName.cs" />
+    <Compile Include="Migrations\201606081540412_changedCurrencyPropName.Designer.cs">
+      <DependentUpon>201606081540412_changedCurrencyPropName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MobileStoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +108,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606050520077_initial.resx">
       <DependentUpon>201606050520077_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606081451530_price-property.resx">
+      <DependentUpon>201606081451530_price-property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606081458257_addedCurrencyProperty.resx">
+      <DependentUpon>201606081458257_addedCurrencyProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606081533354_addedCurrencyEntity.resx">
+      <DependentUpon>201606081533354_addedCurrencyEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606081537107_updateDataTypeOfMobile.Currency.resx">
+      <DependentUpon>201606081537107_updateDataTypeOfMobile.Currency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606081540412_changedCurrencyPropName.resx">
+      <DependentUpon>201606081540412_changedCurrencyPropName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

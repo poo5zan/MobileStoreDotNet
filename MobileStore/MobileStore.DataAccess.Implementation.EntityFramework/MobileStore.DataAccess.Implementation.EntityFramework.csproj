@@ -78,6 +78,10 @@
     <Compile Include="Migrations\201606081540412_changedCurrencyPropName.Designer.cs">
       <DependentUpon>201606081540412_changedCurrencyPropName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606110558450_addedPropertiesForMobile.cs" />
+    <Compile Include="Migrations\201606110558450_addedPropertiesForMobile.Designer.cs">
+      <DependentUpon>201606110558450_addedPropertiesForMobile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MobileStoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606081540412_changedCurrencyPropName.resx">
       <DependentUpon>201606081540412_changedCurrencyPropName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606110558450_addedPropertiesForMobile.resx">
+      <DependentUpon>201606110558450_addedPropertiesForMobile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

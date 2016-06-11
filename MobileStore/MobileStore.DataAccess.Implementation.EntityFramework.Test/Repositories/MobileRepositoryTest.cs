@@ -27,8 +27,8 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework.Test.Repositorie
                 CommonName = "Samsung J7 2016",
                 Model = "J7 2016",
                 UniqueName = "",
-                Price = 783,
-                CurrencyId = 1
+                Price = 783
+                
             });
 
             _mobileRepository.Insert(new Mobile()
@@ -38,8 +38,8 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework.Test.Repositorie
                 CommonName = "Samsung J5 2016",
                 Model = "J5 2016",
                 UniqueName = "",
-                Price = 783,
-                CurrencyId = 1
+                Price = 783
+                
             });
 
 
@@ -58,8 +58,11 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework.Test.Repositorie
             IMobileRepository mobileRepository = new MobileRepository(unitOfWork);
 
             var mobile = mobileRepository.Find(3);
-                     
 
+           // var m = mobileRepository.All.Where(x => x.Brand.Contains("am")).ToList();
+
+            //var m = mobileRepository.AllIncluding(x => x.Id == 3).SingleOrDefault(x => x.CurrencyId == 1);
+            
             Assert.IsNotNull(mobile);
 
         }

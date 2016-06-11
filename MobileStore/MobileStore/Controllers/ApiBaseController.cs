@@ -11,6 +11,8 @@ namespace MobileStore.Controllers
     {
         public ApiBaseController()
         {
+            //System.IdentityModel.Tokens
+
             AuthorizeUser();
             
         }

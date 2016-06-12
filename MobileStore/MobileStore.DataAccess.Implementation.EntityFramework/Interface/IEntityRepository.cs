@@ -9,10 +9,12 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework.Interface
 {
     public interface IEntityRepository<T> : IDisposable
     {
-        IQueryable<T> All { get; }
+        IQueryable<T> All { get; }       
         IQueryable<T> AllIncluding(params Expression<Func<T, object>>[] includeProperties);
         T Find(int id);
+        void InsertGraph(T entity);
         void Insert(T entity);
+        void UpdateGraph(T entity);
         void Update(T entity);
         void Remove(int id);
         void Remove(T entity);

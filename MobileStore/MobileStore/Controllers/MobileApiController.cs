@@ -11,13 +11,13 @@ using System.Web.Http;
 namespace MobileStore.Controllers
 {
     [RoutePrefix("api/mobile")]
-    public class MobileApiController : ApiBaseController
-    {
+    public class MobileApiController : ApiBaseController       
+    {       
         [Route("")]
         [HttpGet]
         public async Task<IHttpActionResult> Get()
-        {
-           
+        {           
+            AuthorizeUser(Request);
             return Ok();
         }
 
@@ -30,6 +30,8 @@ namespace MobileStore.Controllers
                 return BadRequest(ErrorMessage.RequiredId);
             }
 
+            AuthorizeUser(Request);
+
             return Ok();
         }
 
@@ -41,6 +43,9 @@ namespace MobileStore.Controllers
             {
                 return BadRequest(ErrorMessage.Mobile.RequiredMobileInputModel);
             }
+
+            AuthorizeUser(Request);
+
             return Ok();
         }
 
@@ -56,14 +61,17 @@ namespace MobileStore.Controllers
             return Ok();
         }
 
-        [Route("")]
+        [Route("{id:int}")]
         [HttpDelete]
         public async Task<IHttpActionResult> Delete(int id)
-        {
+        {            
             if (id == default(int))
             {
                 return BadRequest(ErrorMessage.RequiredId);
             }
+
+            AuthorizeUser(Request);
+
             return Ok();
         }
 

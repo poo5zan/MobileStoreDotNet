@@ -18,6 +18,7 @@ namespace MobileStore.DataAccess.Implementation.EntityFramework.Test.Repositorie
 
             var unitOfWork = new UnitOfWork();
             IMobileRepository _mobileRepository = new MobileRepository(unitOfWork);
+                       
 
             //insert currencies            
 

@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace MobileStore.DataAccess.Implementation.EntityFramework.Repositories
 {
-    public interface IMobileRepository : IEntityRepository<Mobile>
+    public interface IRoleRepository : IEntityRepository<Role>
     {
-        List<Mobile> AllMobile { get; }
     }
 }

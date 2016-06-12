@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Repositories\MobileRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\UserRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MobileStore.DataAccess.Implementation.EntityFramework\MobileStore.DataAccess.Implementation.EntityFramework.csproj">

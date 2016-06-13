@@ -1,43 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MobileStore.Models.InputModel
+namespace MobileStore.DataTransferObject
 {
-    public class MobileInputModel
+    public class MobileDto
     {
-
-        public MobileInputModel()
-        {
-
-        }
-
-        public MobileInputModel(int id)
-        {
-            this.Id = id;
-        }
-        public int Id { get; private set; }
-
-        private string _Name = "";
-        private string _UniqueName = "";
-        public string Name
-        {
-            get { return _Name; }
-            set { _Name = value; }
-        }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string Model { get; set; }
         public string CommonName { get; set; }
-        public string UniqueName {
-            get { return _UniqueName; }
-            set {
-                var uniqueName = value;
-                //check if this name really is unique in db
-                //if unique == false
-                //throw new exception, or raise error, not unique
-                //else
-                _UniqueName = uniqueName;
-            } }
+        public string UniqueName { get; set; }
         public string Brand { get; set; }
         public decimal Price { get; set; }
         public string Currency { get; set; }

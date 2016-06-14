@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMobileService.cs" />
     <Compile Include="MobileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MobileStore.Business\MobileStore.Business.csproj">
+      <Project>{629b74e0-5a87-4cf4-8687-da2557bd8747}</Project>
+      <Name>MobileStore.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MobileStore.DataTransferObject\MobileStore.DataTransferObject.csproj">
       <Project>{8103829e-16eb-4a96-8dbf-6358ba541ac6}</Project>
       <Name>MobileStore.DataTransferObject</Name>

@@ -53,8 +53,20 @@
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject.Extensions.ContextPreservation, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.ContextPreservation.3.2.0.0\lib\net45-full\Ninject.Extensions.ContextPreservation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.NamedScope, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.NamedScope.3.2.0.0\lib\net45-full\Ninject.Extensions.NamedScope.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common.OwinHost, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.OwinHost.3.2.3.0\lib\net45-full\Ninject.Web.Common.OwinHost.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
@@ -63,6 +75,10 @@
     </Reference>
     <Reference Include="Ninject.Web.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Web.WebApi.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi.OwinHost, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.OwinHost.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.OwinHost.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -198,6 +214,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -302,6 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Ninject\" />
     <Folder Include="Providers\" />
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +334,18 @@
     <ProjectReference Include="..\MobileStore.Common\MobileStore.Common.csproj">
       <Project>{b383538e-1c17-4a9f-bb97-796d60101b1a}</Project>
       <Name>MobileStore.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileStore.DataTransferObject\MobileStore.DataTransferObject.csproj">
+      <Project>{8103829e-16eb-4a96-8dbf-6358ba541ac6}</Project>
+      <Name>MobileStore.DataTransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileStore.DependencyInjection.Container\MobileStore.DependencyInjection.Container.csproj">
+      <Project>{ef94adb2-376a-4965-9b91-11d5131ed919}</Project>
+      <Name>MobileStore.DependencyInjection.Container</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileStore.Service\MobileStore.Service.csproj">
+      <Project>{9d67c7de-c3b0-4999-913b-3bfbb8fe3d03}</Project>
+      <Name>MobileStore.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -6,6 +6,9 @@ using Owin;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 using MobileStore.ExceptionHandlers;
+using MobileStore.App_Start;
+using Ninject.Web.Common.OwinHost;
+using Ninject.Web.WebApi.OwinHost;
 
 [assembly: OwinStartup(typeof(MobileStore.Startup))]
 
@@ -31,10 +34,14 @@ namespace MobileStore
             // Web API routes
             httpConfiguration.MapHttpAttributeRoutes();
 
+           
             httpConfiguration.Services.Add(typeof(IExceptionLogger), new MobileStoreExceptionLogger());
             httpConfiguration.Services.Replace(typeof(IExceptionHandler),new MobileStoreExceptionHandler());
 
-            app.UseWebApi(httpConfiguration);
+            //dependency
+            app.UseNinjectMiddleware(NinjectConfig.CreateKernel).UseNinjectWebApi(httpConfiguration);
+
+           // app.UseWebApi(httpConfiguration);
         }
     }
 }

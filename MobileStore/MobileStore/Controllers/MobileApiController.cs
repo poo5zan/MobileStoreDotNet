@@ -1,5 +1,6 @@
 ﻿using MobileStore.Common;
 using MobileStore.Models.InputModel;
+using MobileStore.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +13,23 @@ namespace MobileStore.Controllers
 {
     [RoutePrefix("api/mobile")]
     public class MobileApiController : ApiBaseController       
-    {       
+    {
+
+        private IMobileService _mobileService;
+
+        public MobileApiController(IMobileService mobileService)
+        {
+            _mobileService = mobileService;
+        }
+
+
         [Route("")]
         [HttpGet]
         public async Task<IHttpActionResult> Get()
         {           
             AuthorizeUser(Request);
-            return Ok();
+            var mobiles = _mobileService.Get();
+            return Ok(mobiles);
         }
 
         [Route("{id:int}")]

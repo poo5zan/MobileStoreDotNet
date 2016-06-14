@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{629B74E0-5A87-4CF4-8687-DA2557BD8747}</ProjectGuid>
+    <ProjectGuid>{EF94ADB2-376A-4965-9B91-11D5131ED919}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MobileStore.Business</RootNamespace>
-    <AssemblyName>MobileStore.Business</AssemblyName>
+    <RootNamespace>MobileStore.DependencyInjection.Container</RootNamespace>
+    <AssemblyName>MobileStore.DependencyInjection.Container</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,14 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMobileBusiness.cs" />
-    <Compile Include="MobileBusiness.cs" />
+    <Compile Include="DependencyConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MobileStore.DataTransferObject\MobileStore.DataTransferObject.csproj">
-      <Project>{8103829e-16eb-4a96-8dbf-6358ba541ac6}</Project>
-      <Name>MobileStore.DataTransferObject</Name>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MobileStore.Business\MobileStore.Business.csproj">
+      <Project>{629b74e0-5a87-4cf4-8687-da2557bd8747}</Project>
+      <Name>MobileStore.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileStore.Service\MobileStore.Service.csproj">
+      <Project>{9d67c7de-c3b0-4999-913b-3bfbb8fe3d03}</Project>
+      <Name>MobileStore.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

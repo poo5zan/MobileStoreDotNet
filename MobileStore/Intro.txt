@@ -1,3 +1,15 @@
 
 Highlights:
 
+Storage,
+User/Role: SQL Server
+Product Information: Mongodb
+Search : Elastic Search
+
+
+Technology used:
+1. ASP.NET MVC / Web API
+2. Angular2
+3. 
+
+

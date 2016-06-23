@@ -38,7 +38,7 @@ namespace MobileStore
             httpConfiguration.Services.Add(typeof(IExceptionLogger), new MobileStoreExceptionLogger());
             httpConfiguration.Services.Replace(typeof(IExceptionHandler),new MobileStoreExceptionHandler());
 
-            //dependency
+            //dependency injection, use Ninject MiddleWare plus useNinjectWebApi
             app.UseNinjectMiddleware(NinjectConfig.CreateKernel).UseNinjectWebApi(httpConfiguration);
 
            // app.UseWebApi(httpConfiguration);
